@@ -17,11 +17,9 @@ I incorporated pre-trained embeddings with TensorFlow to enhance accuracy. The s
 To explore this project and its codebase, follow these steps:
 
 1. Clone this repository to your local machine.
-2. Review the project code and documentation to gain insights into the sentiment analysis techniques used and AWS integration.
+2. Review the project code and documentation to gain insights into the sentiment analysis techniques used.
 3. Feel free to reach out if you have any questions or are interested in collaborating further.
 
 ## Why This Project Matters
-
-Understanding customer sentiment is crucial for businesses looking to enhance customer experiences and make data-driven decisions. The Customer Sentiment Analysis project underscores the potential of NLP and AWS services to unlock valuable insights from customer feedback.
-
+Gaining insights into Twitter sentiment is essential for businesses aiming to elevate experiences and inform data-driven decisions. The Twitter Sentiment Analysis project highlights the effectiveness of Natural Language Processing (NLP) and extracting valuable insights from user feedback on the platform.
 Thank you
