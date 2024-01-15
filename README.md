@@ -2,23 +2,15 @@
 
 ## Problem Statement
 
-The Customer Sentiment Analysis project focuses on developing a robust sentiment analysis model for customer reviews. By harnessing the power of natural language processing (NLP), this project aims to automatically categorize customer sentiments expressed in reviews, providing businesses with valuable insights into customer satisfaction.
+The Twitter Sentiment Analysis project focuses on developing a robust sentiment analysis model for tweets. By harnessing the power of natural language processing (NLP), this project aims to automatically categorize twitter sentiments.
 
 ## Dataset
 
-For this project, I utilized a diverse collection of customer reviews sourced from an e-commerce platform. This dataset serves as the foundation for training and validating our sentiment analysis model.
+For this project, I utilized a diverse collection of tweets, Twitter dataset from Kaggle. This dataset serves as the foundation for training and validating our sentiment analysis model.
 
-## AWS Integration
+## Model
 
-The Customer Sentiment Analysis project seamlessly integrates with Amazon Web Services (AWS) to leverage advanced tools and capabilities:
-
-- **SageMaker's NLP Algorithms**: I trained the sentiment analysis model using AWS SageMaker's built-in natural language processing (NLP) algorithms. This approach ensures accurate sentiment classification, even for large volumes of text data.
-
-- **Amazon S3**: The project efficiently stores pre-trained word embeddings in Amazon S3. This cloud-based storage solution guarantees quick access to essential model components.
-
-## Deployment on AWS
-
-The culmination of this project is the deployment of the sentiment analysis model using AWS Lambda and API Gateway. This setup allows for the real-time analysis of customer feedback, enabling businesses to gauge customer sentiment and respond promptly to improve customer experiences.
+I incorporated pre-trained embeddings with TensorFlow to enhance accuracy. The strength of this approach lies in its ability to capture nuanced meanings in text, improving sentiment analysis results. Furthermore, I seamlessly integrated the developed model into a user-friendly Streamlit UI application, enabling real-time predictions. This sophisticated yet accessible system aids in quickly identifying tweets that may convey potential disaster scenarios.
 
 ## How to Get Started
 
