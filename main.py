@@ -1,26 +1,37 @@
+import os
 import streamlit as st
-import pickle
-import time
-from keras.models import load_model
 import tensorflow as tf
 import tensorflow_hub as hub
+from src.models.train_model import run_train_pipeline
 
-model = tf.keras.models.load_model(
-       ('/Users/shuchi/Documents/work/personal/python/sentiment_analysis/out/tweet_model.h5'),
-       custom_objects={'KerasLayer':hub.KerasLayer}
-)
 
-st.title('Twitter Sentiment Analysis')
+def streamlit_run():
+    model = tf.keras.models.load_model(
+           ('/Users/shuchi/Documents/work/personal/Twitter-Sentiment-Analysis/out/tweet_model.h5'),
+           custom_objects={'KerasLayer':hub.KerasLayer}
+    )
 
-tweet = st.text_input('Enter your tweet')
+    st.title('Twitter Sentiment Analysis')
+    tweet = st.text_input('Enter your tweet')
+    submit = st.button('Predict')
 
-submit = st.button('Predict')
+    if submit:
+        prediction = model.predict([tweet])
+        if prediction[0] > 0.5:
+            st.write("Disaster Tweet")
+        else:
+            st.write("Not Disaster Tweet")
+        print(prediction[0])
+        st.write(prediction[0])
 
-if submit:
-    prediction = model.predict([tweet])
-    if prediction[0] > 0.5:
-        st.write("Disaster Tweet")
+def model_run():
+    run_train_pipeline()
+
+
+if __name__ == '__main__':
+    mode = os.getenv("mode", "streamlit")
+    print("mode", mode)
+    if mode == "model":
+        model_run()
     else:
-        st.write("Not Disaster Tweet")
-    print(prediction[0])
-    st.write(prediction[0])
+        streamlit_run()

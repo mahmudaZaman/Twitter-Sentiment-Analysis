@@ -1,4 +1,4 @@
-# Customer Sentiment Analysis
+# Twitter Sentiment Analysis
 
 ## Problem Statement
 
